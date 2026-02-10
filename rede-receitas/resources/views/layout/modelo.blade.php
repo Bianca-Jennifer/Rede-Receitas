@@ -7,7 +7,10 @@
 
         <!-- Materialize CSS -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"> 
-        @stacks('styles')
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" href="{{ asset('css/style.css') }}"> 
+        @stack('styles')
+
     </head>
 
     <body>
@@ -24,6 +27,8 @@
 
             <!-- Materialize JS -->
             <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script> 
+            <script src="{{ asset('js/script.js') }}"></script>
+            @stack('scripts')
         </footer>    
     </body>
 </html>
