@@ -15,10 +15,10 @@
 
         {{-- LINKS --}}
         <ul class="right hide-on-med-and-down">
-            <li><a href="sass.html">aaaa</a></li>
-            <li><a href="badges.html">bbbb</a></li>
-            <li><a href="collapsible.html">cccc</a></li>
-            <li><a href="mobile.html">dddd</a></li>
+            <li class = "{{ request()->is('/') ? 'active' : '' }}"><a href="sass.html">Home</a></li>
+            <li><a href="badges.html">Receitas</a></li>
+            <li><a href="collapsible.html">Entrar</a></li>
+            <li><a href="mobile.html">Criar Conta</a></li>
         </ul>
     </div>
   </nav>
@@ -39,11 +39,33 @@
     </li>
 
     {{-- LINKS --}}
-    <li><a href="sass.html">aaaaa</a></li>
-    <li><a href="badges.html">bbbb</a></li>
-    <li><a href="collapsible.html">cccc</a></li>
-    <li><a href="mobile.html">ddddd</a></li>
+    <li class = "{{ request()->is('/') ? 'active' : '' }}"><a href="sass.html">Home</a></li>
+    <li><a href="badges.html">Receitas</a></li>
+    <li><a href="collapsible.html">Entrar</a></li>
+    <li><a href="mobile.html">Criar Conta</a></li>
 </ul>
 
 {{-- FIM DO NAVBAR --}}
-          
+
+{{-- HERO SECTION --}}
+<section class="hero">
+    <div class="hero-content">
+        <h1>Raiz & Panela</h1>
+        <p>Receitas simples, com sabor de casa</p>
+    </div>
+
+    <small class="hero-credit">
+        Imagem de
+        <a href="https://pixabay.com/pt/users/lisapohl-16489211/" target="_blank" rel="noopener">
+            LisaPohl
+        </a>
+        por
+        <a href="https://pixabay.com/pt/" target="_blank" rel="noopener">
+            Pixabay
+        </a>
+    </small>
+</section>
+
+
+
+

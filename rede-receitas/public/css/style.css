@@ -1,9 +1,56 @@
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+
+:root {
+  
+  --white: #FFFFFF;
+  --black: #0F0F0F;
+
+  
+  --gray-light: #F3F4F6;   
+  --gray-medium: #9CA3AF;  
+  --gray-dark: #2A2A2A;    
+
+  
+  --green-main: #0B3D2E;  
+  --green-hover: #145C44;  
+}
+
+
+  /*font-family: 'Inter', sans-serif;
+
+
+
+  font-family: 'Playfair Display', serif;
+*/
+
+
+
 
 /* =========================
       NAVBAR (DESKTOP)
    ========================= */
 
 
+nav, .sidenav {
+  background-color: var(--green-main);
+}
+
+nav a {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+}
+
+nav ul li.active a {
+  color: var(--white);
+  background-color: var(--green-hover);
+  border-radius: 6px;
+}
+
+   
 /* LOGO */
 nav .brand-logo .material-icons {
   font-size: 2.5rem;
@@ -23,7 +70,6 @@ nav .brand-logo .material-icons {
 
   width: 40%;               
 }
-
 
 .search-box {
   background-color: #fff;   
@@ -59,6 +105,12 @@ nav .brand-logo .material-icons {
 /* =========================
       NAVBAR (MOBILE)
    ========================= */
+   
+.sidenav li a {
+  color: var(--white);
+  font-family: 'Inter', sans-serif;
+}
+
 
 .sidenav-search {
   padding: 16px;
@@ -84,5 +136,72 @@ nav .brand-logo .material-icons {
   border: none !important;
   box-shadow: none !important;
   margin: 0;
+}
+
+/* =========================
+        HERO SECTION
+   ========================= */
+
+.hero {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  height: 80vh;
+
+  background-image: url("/imgs/capa2.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  overflow: hidden;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  color: #FFFFFF;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 700px;
+    padding: 0 20px;
+}
+
+.hero-content h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3.5rem;   /* aumenta um pouco */
+  font-weight: 700;    /* mais presença */
+  line-height: 1.2;
+}
+
+.hero-content p {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.25rem;  /* ligeiramente menor */
+  font-weight: 400;
+  opacity: 0.9;
+}
+
+.hero-credit {
+    position: absolute;
+    bottom: 10px;
+    right: 15px;
+    font-size: 12px;
+    color: #E0E0E0;
+    z-index: 1;
+}
+
+.hero-credit a {
+    color: #FFFFFF;
+    text-decoration: underline;
 }
 
