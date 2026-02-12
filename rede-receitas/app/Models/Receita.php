@@ -9,4 +9,14 @@ class Receita extends Model
 {
     /** @use HasFactory<\Database\Factories\ReceitaFactory> */
     use HasFactory;
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
+
+    public function favoritos()
+    {
+        return $this->hasMany(Favorito::class);
+    }
 }

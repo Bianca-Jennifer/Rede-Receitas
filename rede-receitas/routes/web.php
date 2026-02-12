@@ -1,7 +1,6 @@
 <?php
 
+use App\Http\Controllers\SiteController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('layout.modelo');
-});
+Route::get('/', SiteController::class . '@index')->name('home');
