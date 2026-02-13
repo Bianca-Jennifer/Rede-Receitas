@@ -5,30 +5,32 @@
 @endonce
 
 <div class="col s6 m6 l3">  
-  <div class="card">
+    <a href="{{ route('home') }}" class="card-link">
+        <div class="card">
 
-      <div class="card-image">
-          <img src="{{ asset($imagem) }}" alt="{{ $titulo }}">
-      </div>
+            <div class="card-image">
+                <img src="{{ asset($imagem) }}" alt="{{ $titulo }}">
+            </div>
 
-      <div class="card-content">
-          <span class="card-title">{{ $titulo }}</span>
+            <div class="card-content">
+                <span class="card-title">{{ $titulo }}</span>
 
-          <p class="card-text">
-              {{ $descricao }}
-          </p>
-      </div>
+                <p class="card-text">
+                    {{ $descricao }}
+                </p>
+            </div>
 
-      <div class="card-action card-footer">
-          <span class="card-author">
-              <i class="material-icons tiny">person</i>
-              {{ $autor }}
-          </span>
+            <div class="card-action card-footer">
+                <span class="card-author">
+                    <i class="material-icons tiny">person</i>
+                    {{ $autor }}
+                </span>
 
-          <span class="card-favs">
-              <i class="material-icons tiny">favorite</i>
-              {{ $favoritos }}
-          </span>
+                <span class="card-favs">
+                    <i class="material-icons tiny">favorite</i>
+                    {{ $favoritos }}
+                </span>
+                </div>
         </div>
-  </div>
+    </a>    
 </div>

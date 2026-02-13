@@ -1,0 +1,29 @@
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+
+:root {
+  
+  --white: #FFFFFF;
+  --black: #0F0F0F;
+
+  
+  --gray-light: #F3F4F6;   
+  --gray-medium: #9CA3AF;  
+  --gray-dark: #2A2A2A;    
+
+  
+  --green-main: #0B3D2E;  
+  --green-hover: #145C44;  
+}
+
+
+  /*font-family: 'Inter', sans-serif;
+
+
+
+  font-family: 'Playfair Display', serif;
+*/
+
