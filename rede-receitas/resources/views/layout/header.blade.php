@@ -15,8 +15,8 @@
 
         {{-- LINKS --}}
         <ul class="right hide-on-med-and-down">
-            <li class = "{{ request()->is('/') ? 'active' : '' }}"><a href="sass.html">Home</a></li>
-            <li><a href="badges.html">Receitas</a></li>
+            <li class = "{{ request()->is('/') ? 'active' : '' }}"><a href="{{ route('home') }}">Home</a></li>
+            <li class="{{ request()->is('receitas*') ? 'active' : '' }}"><a href="{{ route('lista_receitas') }}">Receitas</a></li>
             <li><a href="collapsible.html">Entrar</a></li>
             <li><a href="mobile.html">Criar Conta</a></li>
         </ul>
@@ -39,8 +39,8 @@
     </li>
 
     {{-- LINKS --}}
-    <li class = "{{ request()->is('/') ? 'active' : '' }}"><a href="sass.html">Home</a></li>
-    <li><a href="badges.html">Receitas</a></li>
+    <li class = "{{ request()->is('/') ? 'active' : '' }}"><a href="{{ route('home') }}">Home</a></li>
+    <li class="{{ request()->is('receitas*') ? 'active' : '' }}"><a href="{{ route('lista_receitas') }}">Receitas</a></li>
     <li><a href="collapsible.html">Entrar</a></li>
     <li><a href="mobile.html">Criar Conta</a></li>
 </ul>
@@ -48,6 +48,7 @@
 {{-- FIM DO NAVBAR --}}
 
 {{-- HERO SECTION --}}
+@if(request()->is('/'))
 <section class="hero">
     <div class="hero-content">
         <h1>Raiz & Panela</h1>
@@ -65,7 +66,7 @@
         </a>
     </small>
 </section>
-
+@endif
 
 
 

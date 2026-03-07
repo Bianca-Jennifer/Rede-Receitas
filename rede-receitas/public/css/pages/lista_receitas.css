@@ -1,0 +1,23 @@
+/* Estilos para a página de lista de receitas */
+
+/* Pagination */
+.pagination li.active a {
+    background-color: var(--green-main); 
+    color: #fff;                        
+}
+
+
+.pagination li.waves-effect a:hover {
+    background-color: var(--green-hover); 
+    color: #fff;                          
+}
+
+
+.pagination li.disabled a i {
+    color: #ccc; 
+}
+
+
+.pagination li.waves-effect a i {
+    color: var(--green-main);
+}
