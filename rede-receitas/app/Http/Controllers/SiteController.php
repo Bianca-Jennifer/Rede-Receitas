@@ -30,12 +30,32 @@ class SiteController extends Controller
         return view('pages.home', compact('ultimasReceitas', 'maisFavoritados', 'receitasRapidas'));
     }
 
-    public function lista_receitas()
+    public function lista_receitas(Request $request)
     {
         $receitas = Receita::with('user')
             ->withCount('favoritos')
-            ->latest()
-            ->paginate(12);
+            ->latest();
+        if ($request->categoria) {
+            $receitas->where('categoria', $request->categoria);
+        }
+
+        if ($request->tempo) {
+            $receitas->where('tempo_preparo', '<=', $request->tempo);
+        }
+
+        if ($request->busca) {
+        $busca = $request->busca;
+
+        $receitas->where(function ($query) use ($busca) {
+            $query->where('titulo', 'like', "%{$busca}%")
+                  ->orWhereHas('user', function ($q) use ($busca) {
+                      $q->where('name', 'like', "%{$busca}%");
+                    });
+            });
+        }
+
+
+        $receitas = $receitas->paginate(12)->withQueryString();
 
         return view('pages.lista_receitas', compact('receitas'));
     }

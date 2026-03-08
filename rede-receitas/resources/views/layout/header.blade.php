@@ -6,10 +6,10 @@
         <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
 
         {{-- BARRA DE PESQUISA --}}
-        <form class="search-center hide-on-med-and-down">
+        <form method="GET" action="/receitas" class="search-center hide-on-med-and-down">
             <div class="search-box">
+                <input type="search" name="busca" placeholder="Pesquisar..." aria-label="Pesquisar" value="{{ request('busca') }}">
                 <i class="material-icons">search</i>
-                <input type="text" placeholder="Pesquisar..." aria-label="Pesquisar">
             </div>
         </form>
 
@@ -24,16 +24,17 @@
   </nav>
 
 
+
 {{-- MENU HAMBÚRGUER PARA MOBILE --}}  
 <ul class="sidenav" id="mobile-demo">    
     
     {{-- BARRA DE PESQUISA --}}
     <li class="sidenav-search">
-        <form>
+        <form method="GET" action="/receitas">
             <div class="search-box-mobile">
+                <input type="search" name="busca" placeholder="Pesquisar..." aria-label="Pesquisar" value="{{ request('busca') }}">
                 <i class="material-icons">search</i>
-                <input type="text" placeholder="Pesquisar..." aria-label="Pesquisar">
-
+                
             </div>
         </form>
     </li>

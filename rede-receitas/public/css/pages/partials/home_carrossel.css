@@ -1,6 +1,6 @@
 .receitas-swiper-wrapper {
     width: 100%;
-    padding: 0 16px; /* espaço nas bordas */
+    padding: 0 16px; 
     box-sizing: border-box;
 }
 
@@ -10,9 +10,9 @@
 }
 
 .receitas-swiper {
-  padding-bottom: 36px; /* espaço pras bolinhas */  
-  --swiper-pagination-color: var(--green-main); /* bolinha ativa */
-  --swiper-pagination-bullet-inactive-color: #9CA3AF; /* inativas */
+  padding-bottom: 36px; 
+  --swiper-pagination-color: var(--green-main); 
+  --swiper-pagination-bullet-inactive-color: #9CA3AF; 
   --swiper-pagination-bullet-inactive-opacity: 1;
 }
 
@@ -24,9 +24,9 @@
         bottom: auto !important;
     }
 
-    /* garante que o swiper ocupe o centro real */
+    
     .receitas-swiper {
-        padding-bottom: 0; /* não precisamos mais */
+        padding-bottom: 0; 
         overflow: visible;
         margin-left: auto;
         margin-right: auto;
@@ -35,13 +35,13 @@
         
     }
 
-    /* centraliza o slide */
+    
     .receitas-swiper .swiper-slide {
         display: flex;
         justify-content: center;
     }
 
-    /* controla o tamanho REAL do card */
+    
     .receitas-swiper .card-wrapper {
         width: 100%;
         max-width: 280px;
@@ -52,7 +52,7 @@
 
 @media (min-width: 769px) {
     .receitas-swiper .card-wrapper {
-        max-width: none;   /* remove limite */
+        max-width: none;   
         width: 100%;
     }
 }

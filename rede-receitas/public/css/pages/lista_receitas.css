@@ -21,3 +21,36 @@
 .pagination li.waves-effect a i {
     color: var(--green-main);
 }
+
+/* Filtros */
+
+.container{
+    margin-top: 20px;
+    margin-left: 5px;
+}
+
+.filtros-form {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* mantém à esquerda */
+  gap: 20px;
+}
+
+.btn-filtrar {
+  background-color: var(--green-main);
+}
+
+
+.btn-filtrar:hover {
+  background-color: var(--green-hover);
+}
+
+.dropdown-content li > a, 
+.dropdown-content li > span {
+  color: var(--green-main);
+}
+
+
+.dropdown-content li:hover {
+  background-color: var(--gray-light);
+}

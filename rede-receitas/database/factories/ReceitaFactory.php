@@ -24,7 +24,7 @@ class ReceitaFactory extends Factory
             'modo_preparo' => $this->faker->paragraphs(3, true),
             'tempo_preparo' => $this->faker->numberBetween(10, 120),
             'rendimento' => $this->faker->numberBetween(1, 10) . ' porções',
-            'categoria' => $this->faker->randomElement(['Entrada', 'Prato Principal', 'Sobremesa', 'Bebida']),
+            'categoria' => $this->faker->randomElement(['Entrada', 'Prato Principal', 'Sobremesa', 'Massas', 'Bebida']),
             'user_id' => \App\Models\User::factory(),
         ];
     }
