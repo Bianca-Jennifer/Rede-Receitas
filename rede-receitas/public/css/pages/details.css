@@ -1,0 +1,68 @@
+.topo-receita{
+    margin-bottom:40px;
+    margin-top: 10px;
+}
+
+.imagem img{
+    width:100%;
+    height:280px;
+    object-fit:cover;
+    border-radius:10px;
+}
+
+.dados{
+    margin:15px 0;
+
+    margin:15px 0;
+    display:flex;
+    gap:15px;
+}
+
+
+h4 {margin-top: 0%;}
+
+
+
+.autor-fav{
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+.autor{
+    display:flex;
+    align-items:center;
+    gap:6px;
+}
+
+.autor i{
+    color:#0B3D2E;
+}
+
+.fav{
+    display:flex;
+    align-items:center;
+    gap:4px;
+}
+
+.fav-icon{
+    cursor:pointer;
+    color:#777;
+    transition:0.3s;
+}
+
+.fav-icon.ativo{
+    color:#e53935;
+}
+
+.fav-count{
+    pointer-events:none; /* impede qualquer clique */
+}
+
+
+.chip{
+    display:flex;
+    align-items:center;
+    gap:5px;
+}
+

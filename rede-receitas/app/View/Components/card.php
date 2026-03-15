@@ -15,7 +15,8 @@ class card extends Component
         public string $descricao,
         public ?string $imagem,
         public string $autor,
-        public int $favoritos)
+        public int $favoritos,
+        public string $slug)
     {}
 
     /**

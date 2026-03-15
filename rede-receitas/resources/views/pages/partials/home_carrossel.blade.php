@@ -12,6 +12,7 @@
                             :imagem="$receita->imagem"
                             :autor="$receita->user->name"
                             :favoritos="$receita->favoritos_count"
+                            :slug="$receita->slug"
                         />
                     </div>
                 </div>

@@ -5,7 +5,7 @@
 @endonce
 
 <div class="col s6 m6 l3">  
-    <a href="{{ route('home') }}" class="card-link">
+    <a href="{{ route('details', ['slug' => $slug]) }}" class="card-link">
         <div class="card">
 
             <div class="card-image">

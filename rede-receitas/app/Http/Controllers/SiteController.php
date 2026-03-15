@@ -59,4 +59,13 @@ class SiteController extends Controller
 
         return view('pages.lista_receitas', compact('receitas'));
     }
+
+    public function details($slug){
+        $receita = Receita::with('user')
+            ->withCount('favoritos')
+            ->where('slug', $slug)
+            ->firstOrFail();
+
+        return view('pages.details', compact('receita'));
+    }
 }
