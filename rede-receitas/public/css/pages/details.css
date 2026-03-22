@@ -66,3 +66,59 @@ h4 {margin-top: 0%;}
     gap:5px;
 }
 
+
+
+.secao-detalhes{
+    margin-top: 40px;
+    padding: 0 20px;
+}
+
+/* BLOCO */
+.bloco{
+    background: white;
+    border-radius: 16px;
+    padding: 25px;
+    margin-bottom: 25px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* TITULO */
+.bloco h5{
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.lista-ingredientes{
+    list-style: none;
+    padding-left: 0;
+}
+
+.lista-ingredientes li{
+    font-size: 18px;
+    padding: 8px 0;
+    position: relative;
+    padding-left: 18px;
+}
+
+.lista-ingredientes li::before{
+    content: "•";
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+}
+
+/* PREPARO (número simples) */
+.lista-preparo{
+    padding-left: 20px;
+}
+
+.lista-preparo li{
+    font-size: 18px;
+    padding: 10px 0;
+    list-style-type: decimal;
+}
+

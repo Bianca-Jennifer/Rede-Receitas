@@ -72,8 +72,37 @@
         </p>
 
     </div>
-
 </div>
 
+<div class="secao-detalhes">
 
+    <!-- INGREDIENTES -->
+    <div class="bloco">
+        <h5>
+            <i class="material-icons">restaurant_menu</i>
+            Ingredientes
+        </h5>
+
+        <ul class="lista-ingredientes">
+            @foreach (array_filter(explode("\n", $receita->ingredientes)) as $ingrediente)
+                <li>{{ $ingrediente }}</li>
+            @endforeach
+        </ul>
+    </div>
+
+    <!-- MODO DE PREPARO -->
+    <div class="bloco">
+        <h5>
+            <i class="material-icons">format_list_numbered</i>
+            Modo de Preparo
+        </h5>
+
+        <ol class="lista-preparo">
+            @foreach (array_filter(explode("\n", $receita->modo_preparo)) as $passo)
+                <li>{{ $passo }}</li>
+            @endforeach
+        </ol>
+    </div>
+
+</div>
 @endsection
